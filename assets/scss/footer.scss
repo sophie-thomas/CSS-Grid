@@ -1,0 +1,15 @@
+/*--- Footer           -------*/
+footer {
+  margin-top: 40px;
+}
+
+/* Footer Media Queries*/
+@media screen and (max-width: 991px) {
+  footer {
+    margin-top: 20px;
+
+    hr {
+      margin-bottom: 10px;
+    }
+  }
+}

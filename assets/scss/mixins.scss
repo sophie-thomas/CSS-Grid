@@ -1,0 +1,17 @@
+/*--- Mixins           -------*/
+
+@mixin heading-1 {
+  font-size: $heading-1-size;
+  line-height: #{$heading-1-size * $line-height};
+  word-spacing: #{$heading-1-size * $word-spacing};
+}
+@mixin heading-2 {
+  font-size: $heading-2-size;
+  line-height: #{$heading-2-size * $line-height};
+  word-spacing: #{$heading-2-size * $word-spacing};
+}
+@mixin paragraph {
+  font-size: $paragraph-size;
+  line-height: #{$paragraph-size * $line-height};
+  word-spacing: #{$paragraph-size * $word-spacing};
+}
