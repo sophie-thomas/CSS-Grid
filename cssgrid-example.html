@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Grid Example by Sophie Thomas</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sophie Thomas">
+    <meta name="description" content="12 Column Grid created by Sophie using CSS Grid.">
+    <meta name="keywords" content="CSS Grid">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fromsophie">
+    <meta name="twitter:title" content="Sophie Thomas">
+    <meta name="twitter:description" content="12 Column Grid created by Sophie using CSS Grid.">
+    <meta name="twitter:image" content="https://sophie-thomas.github.io/assets/images/sophie_headshot.jpg">
+    <link rel="stylesheet" href="assets/css/base.css" type="text/css">
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  </head>
+  
+  <body>  
+
+    <main id="main-content">
+      <div class="grid-container">
+        <div class="grid-item span-12">
+          <h1>CSS Grid: 12 Column Grid Example</h1>
+          <p>I have developed a simple, responsive grid system using CSS Grid properties that you can integrate into your projects. By default, the grid is set to 12 columns, but you can easily tweak this by adjusting the $grid-columns variable. The columns are adjusted for smaller screens using @media queries at defined breakpoints.</p>
+          <p>When using this grid: 
+            <ul>
+              <li>Treat both .grid-container and .grid-container-fluid as rows.</li>
+              <li>To work out the offset number, begin at the start of the row each time. When determining the offset number for columns beyond the first, add the span and offset numbers on the columns that precede the one you are currently offsetting.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+        
+      <div class="grid-example">  
+
+        <div class="grid-container">
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+        </div>
+  
+        <div class="grid-container">
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2">span-2</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-3">span-3</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-4">span-4</div>
+          <div class="grid-item span-4">span-4</div>
+          <div class="grid-item span-4">span-4</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-5">span-5</div>
+          <div class="grid-item span-7">span-7</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-6">span-6</div>
+          <div class="grid-item span-6">span-6</div>
+        </div>
+  
+        <div class="grid-container">
+          <div class="grid-item span-8">span-8</div>
+          <div class="grid-item span-4">span-4</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-9">span-9</div>
+          <div class="grid-item span-3">span-3</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-10">span-10</div>
+          <div class="grid-item span-2">span-2</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-11">span-11</div>
+          <div class="grid-item span-1">span-1</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-12">span-12</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-4">span-4</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2 offset-8">span-2, offset-8</div>
+          <div class="grid-item span-2">span-2</div>
+        </div> 
+
+        <div class="grid-container">
+          <div class="grid-item span-4">span-4</div>
+          <div class="grid-item span-4 offset-8">span-4, offset-4</div>
+        </div>
+  
+        <div class="grid-container">
+          <div class="grid-item span-5 offset-1">span-5, offset-1</div>
+          <div class="grid-item span-6">span-6</div>
+        </div> 
+
+        <div class="grid-container">
+          <div class="grid-item span-8 offset-3">span-8, offset-3</div>
+          <div class="grid-item span-1">span-1</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-4">span-4</div>
+          <div class="grid-item span-2">span-2</div>
+          <div class="grid-item span-2 offset-8">span-2, offset-2</div>
+          <div class="grid-item span-2">span-2</div>
+        </div> 
+  
+        <div class="grid-container">
+          <div class="grid-item span-3">span-3</div>
+          <div class="grid-item span-2 offset-10">span-2, offset-10</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-3 offset-3">span-3, offset-3</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-1">span-1</div>
+          <div class="grid-item span-2 offset-9">span-2, offset-9</div>
+          <div class="grid-item span-1">span-1</div>
+        </div>
+
+      </div> <!-- end .grid-example -->
+
+    </main>
+
+    <footer>
+      <div class="grid-container">
+        <div class="grid-item span-12">
+          <hr>
+        </div>
+        <div class="grid-item span-6">
+          <p><a href="https://sophie-thomas.github.io/" target="_blank" rel="noreferrer" aria-label="Links to Sophie's portfolio website" title="Sophie's Portfolio Website">Sophie's Portfolio</a></p>
+        </div>
+        <div class="grid-item span-6 align-right">
+          <p>&copy; Copyright&nbsp;<script>document.write(new Date().getFullYear())</script> Sophie Thomas</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

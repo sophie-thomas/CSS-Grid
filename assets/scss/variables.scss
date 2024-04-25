@@ -1,0 +1,43 @@
+/*--- Variables           -------*/
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+$primary-font: 'Nunito', sans-serif;
+
+// Character sizing
+$base-html-size: 62.5%;
+
+$heading-1-size: 4.6rem;
+$heading-2-size: 4rem;
+$paragraph-size: 2rem;
+
+// Text spacing based on WCAG guidelines
+$line-height: 1.5;
+$word-spacing: 0.16;
+
+// Colours
+$base-colour: #373839;
+
+$primary-background-color: #fff;
+
+$primary-text-color: $base-colour;
+$secondary-text-color: #fff;
+
+// - Links
+$link-text-color: $base-colour;
+
+// - Components
+$border-color: $base-colour;
+
+// CSS Grid
+$grid-columns: 12;
+$gap: 10px;
+$grid-item-color: $base-colour;
+
+// - Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

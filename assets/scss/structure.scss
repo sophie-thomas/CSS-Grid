@@ -1,0 +1,86 @@
+/*--- Base styles            -------*/
+html {
+  font-size: $base-html-size;
+}
+
+body {
+  display: grid;
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  @include paragraph;
+  margin: 0px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+strong {
+  font-weight: bold;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+hr {
+  background-color: $border-color;
+  border-radius: 10px;
+  border: 0;
+  margin: 0;
+  height: 12px;
+}
+  
+/* Character styling */
+h1, h2, p {
+  margin: 0;
+}
+h1 {
+  @include heading-1;
+  margin-bottom: 20px;
+}
+h2 {
+  @include heading-2;
+  margin: 20px 0 10px;
+}
+p {
+  margin-bottom: 2.5rem;
+}
+  
+/* Links */
+a {
+  color: $link-text-color;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: none;
+  }
+}
+  
+/* Buttons */
+button {
+  background: inherit;
+  font-family: $primary-font;
+  @include paragraph;
+  word-wrap: break-word;
+  border: 0;
+  outline: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+  
+/*--- Base styles Media Queries            -------*/
+@media screen and (max-width: 991px) {
+  .align-right {
+    text-align: left;
+  }
+}  
