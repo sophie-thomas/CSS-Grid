@@ -17,12 +17,6 @@ body {
 strong {
   font-weight: bold;
 }
-.align-center {
-  text-align: center;
-}
-.align-right {
-  text-align: right;
-}
 hr {
   background-color: $border-color;
   border-radius: 10px;
@@ -30,6 +24,9 @@ hr {
   margin: 0;
   height: 12px;
 }
+
+/* Text Alignment */
+@include text-alignment('align', $breakpoints);
   
 /* Character styling */
 h1, h2, p {
@@ -77,10 +74,3 @@ button {
     text-decoration: underline;
   }
 }
-  
-/*--- Base styles Media Queries            -------*/
-@media screen and (max-width: 991px) {
-  .align-right {
-    text-align: left;
-  }
-}  

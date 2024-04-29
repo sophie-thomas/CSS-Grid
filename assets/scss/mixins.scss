@@ -15,3 +15,16 @@
   line-height: #{$paragraph-size * $line-height};
   word-spacing: #{$paragraph-size * $word-spacing};
 }
+@mixin text-alignment($prefix, $breakpoints) {
+  .align-left { text-align: left; }
+  .align-right { text-align: right; }
+  .align-center { text-align: center; }
+  
+  @each $breakpoint, $value in $breakpoints {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      .#{$breakpoint}-#{$prefix}-left { text-align: left; }
+      .#{$breakpoint}-#{$prefix}-right { text-align: right; }
+      .#{$breakpoint}-#{$prefix}-center { text-align: center; }
+    }
+  }
+}
