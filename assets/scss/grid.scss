@@ -19,10 +19,6 @@
 }
 
 /* Defining columns spans and offsets */
-// Calculates starting grid column for offsets
-@function offset-column($offset, $span) {
-  @return $span + $offset;
-}
 // Loop through all column spans and define the .grid-column-end number
 @for $span from 1 through $grid-columns {
   .span-#{$span} {
@@ -86,7 +82,7 @@
 }
 
 /* CSS Grid Media Queries */
-// Sets the columns to be span-12 with a startting column of 1
+// Sets the columns to be span-12 with a starting column of 1
 @media (max-width: 380px) {
   [class*="span-"] {
     grid-column-end: span 12;
