@@ -10,83 +10,88 @@
   max-width: 1360px;
   margin: 0 auto;
 }
-.grid-item {
-  padding: 0 10px 0 0;
-}
-.grid-example .grid-item { /* This can be removed in your own project, it is here to show the columns visually. */
+.grid-example [class*="span-"] { /* This can be removed in your own project, it is here to show the columns visually. */
   background-color: $grid-item-color;
   color: $secondary-text-color;
-  border-radius: 10px;
+  overflow: hidden;
   padding: 10px;
-}
-.grid-item:has(hr) {
-  padding: 0;
+  border-radius: 10px;
 }
 
+/* Defining columns spans and offsets */
 // Calculates starting grid column for offsets
 @function offset-column($offset, $span) {
   @return $span + $offset;
 }
-
-// Loops through all column spans and creates span CSS classes and set the span value
+// Loop through all column spans and define the .grid-column-end number
 @for $span from 1 through $grid-columns {
   .span-#{$span} {
     grid-column-end: span $span;
   }
 }
-
-// Loops through offsets 1 to 11 to set grid-column-start property based on loop variable + 1
-@for $offset from 1 through $grid-columns {
-  .grid-item.offset-#{$offset} {
+// Loop through all column offsets and define the .grid-column-start number
+@for $offset from 0 through $grid-columns {
+  .offset-#{$offset} {
     grid-column-start: $offset + 1;
+  }
+}
+// Defines media queries for each breakpoint and loops through both spans and offsets to set grid-column-end and grid-column-start
+@media (max-width: map-get($breakpoints, xl)) {
+  @for $span from 1 through $grid-columns {
+    .xl-span-#{$span} {
+      grid-column-end: span $span;
+    }
+  }
+  @for $offset from 0 through $grid-columns {
+    .xl-offset-#{$offset} {
+      grid-column-start: $offset + 1;
+    }
+  }
+}
+@media (max-width: map-get($breakpoints, lg)) {
+  @for $span from 1 through $grid-columns {
+    .lg-span-#{$span} {
+      grid-column-end: span $span;
+    }
+  }
+  @for $offset from 0 through $grid-columns {
+    .lg-offset-#{$offset} {
+      grid-column-start: $offset + 1;
+    }
+  }
+}
+@media (max-width: map-get($breakpoints, md)) {
+  @for $span from 1 through $grid-columns {
+    .md-span-#{$span} {
+      grid-column-end: span $span;
+    }
+  }
+  @for $offset from 0 through $grid-columns {
+    .md-offset-#{$offset} {
+      grid-column-start: $offset + 1;
+    }
+  }
+}
+@media (max-width: map-get($breakpoints, sm)) {
+  @for $span from 1 through $grid-columns {
+    .sm-span-#{$span} {
+      grid-column-end: span $span;
+    }
+  }
+  @for $offset from 0 through $grid-columns {
+    .sm-offset-#{$offset} {
+      grid-column-start: $offset + 1;
+    }
   }
 }
 
 /* CSS Grid Media Queries */
-@media (max-width: 991px) {
-  .span-1 {
-    grid-column-end: span 3;
-  }
-
-  .span-2 {
-    grid-column-end: span 4;
-  }
-
-  .span-3, .span-4, .span-5 {
-    grid-column-end: span 6;
-  
-    &[class*="offset-"] {
-      grid-column-start: 7;
-    }
-  }
-
-  .span-6, .span-7, .span-8, .span-9, .span-10, .span-11 {
-    grid-column-end: span 12;
-  }
-
-  [class*="offset-"] {
-    &:nth-child(odd) {
-      grid-column-start: 1;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .span-1, .span-2 {
-    grid-column-end: span 6;
-  }
-
-  .span-3, .span-4, .span-5 {
-    grid-column-end: span 12;
-    margin-left: 0px;
-  }
-
-  [class*="offset-"] {
-    grid-column-start: 1!important;
-  }
-}
-
-@media (max-width: 576px) {
+// Sets the columns to be span-12 with a startting column of 1
+@media (max-width: 380px) {
   [class*="span-"] {
     grid-column-end: span 12;
+  }
+  [class*="offset-"] {
+    grid-column-start: 1;
   }
 }
