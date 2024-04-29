@@ -18,4 +18,5 @@ When using this grid:
 Codepen: https://codepen.io/fromsophie/pen/rNbbPWR
 
 Previous versions:
-CSS Grid: V1 - Column spans and offsets are adjusted automatically for smaller screens using @media queries at defined breakpoints rather than being able to manually define them. Codepen: https://codepen.io/fromsophie/pen/BaEvxyZ
+
+- CSS Grid: V1 - Column spans and offsets are adjusted automatically for smaller screens using @media queries at defined breakpoints rather than being able to manually define them. Codepen: https://codepen.io/fromsophie/pen/BaEvxyZ
